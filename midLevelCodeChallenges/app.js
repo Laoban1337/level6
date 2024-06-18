@@ -1,23 +1,23 @@
 
 
 
-function extractInitials(names) {
+// function extractInitials(names) {
 
-    //mapping through names/// splitting them by first and last.
-return names.map(name=>{
-    const [first,last] = name.split(' ')
+//     //mapping through names/// splitting them by first and last.
+// return names.map(name=>{
+//     const [first,last] = name.split(' ')
 
-    //returning the name first letter of first and last name
-    return first[0] + last[0]
-})
-};
+//     //returning the name first letter of first and last name
+//     return first[0] + last[0]
+// })
+// };
 
 
-const fullNames = ['John Doe', 'Alice Johnson', 'Bob Smith'];
+// const fullNames = ['John Doe', 'Alice Johnson', 'Bob Smith'];
 
-console.log(extractInitials(fullNames))
-// const initialsArray = extractInitials(fullNames);
-// console.log(initialsArray); // Output: ['JD', 'AJ', 'BS']
+// console.log(extractInitials(fullNames))
+// // const initialsArray = extractInitials(fullNames);
+// // console.log(initialsArray); // Output: ['JD', 'AJ', 'BS']
 
 
 
@@ -45,5 +45,32 @@ console.log(extractInitials(fullNames))
 //   { name: "Greg", age: 28, country: "Australia" },
 // ];
 
-// const filteredByCountry = filterByProperty(people, "country", "USA");
+// const filteredByCountry = filterByProperty(people, "age",28);
 // console.log(filteredByCountry);
+
+
+function capitalizeWords(str){
+// turn the string into an array
+const splitStr = str.split(" ")
+//map over the array 
+const cappedArray= splitStr.map((word)=> {
+  const newWord = word[0].toUpperCase() + word.slice(1)
+  return newWord
+})
+// splitting at each space to give my array of words 
+// grab the first letter of each word and cap it
+//turn back into a string 
+return cappedArray.join(" ")
+}
+
+const sentence = "welcome to the jungle!!!"    //Welcome To The Jungle!!!
+
+console.log(capitalizeWords(sentence))
+
+//talk through it  // understand   // ??s
+
+// psuedo code
+
+// solve
+
+//explain

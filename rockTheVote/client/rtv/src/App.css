@@ -1,0 +1,267 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/*  */
+/* issueDetail.css */
+
+.issueDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  box-shadow: 0px 0px 2px 4px rgba(77, 40, 40, 0.1);
+  background-color: #fff;
+}
+
+.issueDetail h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.issueDetail h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.issueDetail img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+
+/* issueDetail.css */
+
+.issueDetail button {
+  display: flex;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.issueDetail button:hover {
+  background-color: #f0f0f0;
+}
+
+.issueDetail button:active {
+  background-color: #ddd;
+}
+
+.issueDetail button:nth-child(4n+1) {
+  background-color: #4CAF50; /* Edit - green */
+  color: white;
+}
+
+.issueDetail button:nth-child(4n+2) {
+  background-color: #f44336; /* Delete - red */
+  color: white;
+}
+
+.issueDetail button:nth-child(4n+3) {
+  background-color: #008CBA; /* Upvote - blue */
+  color: white;
+}
+
+.issueDetail button:nth-child(4n+4) {
+  background-color: #FFA500; /* Downvote - orange */
+  color: white;
+}
+
+/* issueDetail.css */
+
+.issueDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.issueDetail h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.issueDetail h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.issueDetail img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.issueDetail .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.issueDetail button {
+  flex: 1 1 45%; /* Flex-grow, flex-shrink, and flex-basis */
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.issueDetail button:hover {
+  background-color: #f0f0f0;
+}
+
+.issueDetail button:active {
+  background-color: #ddd;
+}
+
+.issueDetail button:nth-child(4n+1) {
+  background-color: #4CAF50; /* Edit - green */
+  color: white;
+}
+
+.issueDetail button:nth-child(4n+2) {
+  background-color: #f44336; /* Delete - red */
+  color: white;
+}
+
+.issueDetail button:nth-child(4n+3) {
+  background-color: #008CBA; /* Upvote - blue */
+  color: white;
+}
+
+.issueDetail button:nth-child(4n+4) {
+  background-color: #FFA500; /* Downvote - orange */
+  color: white;
+}
+
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+  }
+}
