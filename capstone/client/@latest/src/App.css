@@ -1,0 +1,263 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.logo {
+  width: 150px; /* Adjust width as needed */
+  border-radius: 25%; /* Rounded corners */
+  position: fixed; /* Position fixed to keep it in place */
+  top: 10px; /* Adjust top position */
+  left: 10px; /* Adjust left position */
+  z-index: 1000; /* Ensure it's above other content */
+  opacity: 25%;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --brushed-silver: #b0b0b0;
+  --metallic-gray: #808080;
+  --steel-blue: #4682b4;
+}
+
+body {
+  background-color: var(--metallic-gray);
+  color: var(--brushed-silver);
+}
+
+header {
+  background-color: var(--brushed-silver);
+  color: var(--metallic-gray);
+}
+
+button {
+  background-color: var(--steel-blue);
+  color: var(--brushed-silver);
+  border: 1px solid var(--metallic-gray);
+}
+
+.regForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 480px; /* Increased by 20% from 400px */
+  margin: 0 auto;
+  padding: 24px; /* Increased by 20% from 20px */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.regForm div {
+  margin-bottom: 18px; /* Increased by 20% from 15px */
+  width: 100%;
+}
+
+.regForm label {
+  font-size: 1.4rem; /* Increased by 20% from 1.2rem */
+  margin-bottom: 6px; /* Increased by 20% from 5px */
+  display: block;
+}
+
+.regForm input {
+  width: 100%;
+  padding: 12px; /* Increased by 20% from 10px */
+  font-size: 1.3rem; /* Increased by 20% from 1.1rem */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.regForm button {
+  padding: 12px 18px; /* Increased by 20% from 10px 15px */
+  font-size: 1.3rem; /* Increased by 20% from 1.1rem */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Center the button */
+}
+
+.regForm button:hover {
+  background-color: #0056b3;
+}
+
+.regForm p {
+  color: red;
+  font-size: 1rem; /* Increased by 20% from 0.9rem */
+  margin-top: 6px; /* Increased by 20% from 5px */
+}
+
+.choreboar {
+  width: 400px;
+}
+
+.choreBoar {
+  border: 2px solid white;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.choreList {
+  width: 400px;
+}
+
+/* ChoreForm.css */
+
+.choreForm {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.choreForm div {
+  margin-bottom: 15px;
+}
+
+.choreForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.choreForm input {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.choreForm button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choreForm button:hover {
+  background-color: #0056b3;
+}
+.choreImg {
+  border: 4px solid darkgray;
+  width: 350px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.choreName{
+  color:white
+}
+.profile {
+  width: 400px;
+  border-radius: 50%;
+}
+
+.public {
+  width: 150px;
+  border-radius: 25%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Ensures equal spacing between children */
+  align-items: center; /* Centers items vertically */
+  background-color: #4d4d4d; /* Dark gray background */
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 100px 100px; /* Adjust size as needed */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding for navbar */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px; /* Adjust as needed */
+}
+
+.navbar a {
+  color: #fff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+  color: #ccc; /* Hover color */
+}
+
+.navbar button {
+  color: #fff; /* Button text color */
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #fff; /* White border */
+  padding: 8px 16px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}

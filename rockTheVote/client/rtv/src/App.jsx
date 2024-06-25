@@ -1,6 +1,4 @@
-import React, { useContext, } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React, { useContext } from "react";
 import Home from "./components/Home";
 import Login from "./components/Profile.jsx";
 import Comment from "./components/Public.jsx";
@@ -12,7 +10,7 @@ import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 
 export default function App() {
-  const { token, logout, } = useContext(UserContext);
+  const { token, logout } = useContext(UserContext);
 
   return (
     <div className="app">

@@ -1,0 +1,7 @@
+model validators`password reqs`
+OAuth:google/ or General OAtuh
+Regex
+Build backend for reps
+handle friend requests
+handle upload images: cloudinary
+Workshop on branching

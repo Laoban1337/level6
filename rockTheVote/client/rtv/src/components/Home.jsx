@@ -3,10 +3,9 @@ import Login from "./Profile.jsx";
 import Register from "../components/Register.jsx";
 import { UserContext } from "../context/UserProvider.jsx";
 
-
+const initInputs = { username: "", password: "" };
 
 export default function Home() {
-  const initInputs = { username: "", password: "" };
   const [inputs, setInputs] = useState(initInputs);
   const [formToggle, setFormToggle] = useState(false);
 

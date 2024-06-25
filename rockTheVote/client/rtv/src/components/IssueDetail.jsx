@@ -3,9 +3,9 @@ import { UserContext } from "../context/UserProvider";
 import CommentContainer from "./CommentContainer";
 
 export default function IssueDetail(props) {
-  const { editIssues, deleteIssues, upVoteIssue, downVoteIssue, allIssues } =
+  const { editIssues, deleteIssues, upVoteIssue, downVoteIssue, allIssues,user } =
     useContext(UserContext);
-  const { title, description, imgUrl, _id, username, likedUser, disLikedUser,} =
+  const { title, description, imgUrl, _id, username, likedUser, disLikedUser,user:userId} =
     props;
 
   console.log("userNameTest", username);
@@ -80,12 +80,11 @@ export default function IssueDetail(props) {
             <p>Downvotes: {disLikedUser.length}</p>
             <button onClick={() => downVoteIssue(_id)}> Downvote</button>
           </div>
-          <div className="button-container">
+      { user._id === userId&&  <div className="button-container">
             <button onClick={toggleEdit}>Edit</button>
             <button onClick={() => deleteIssues(_id)}>Delete</button> 
-            <button onClick={() => upVoteIssue(_id)}>Upvote</button>
-            <button onClick={() => downVoteIssue(_id)}>Downvote</button>
-          </div>
+           
+          </div>}
           <CommentContainer issueId={_id} username={username} />
         </>
       )}

@@ -4,17 +4,28 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const morgan = require("morgan");
 const { expressjwt } = require("express-jwt");
+// const cors = require(`cors`)
 const port = process.env.PORT;
 const dataBaseConnect = process.env.DB;
 
 //middleware
+// app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
 // Database connection
-mongoose.connect(dataBaseConnect, {
+mongoose.connect(dataBaseConnect,{
+ 
+  
+  
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((err) => {
+  console.error('Failed to connect to MongoDB:', err);
+});
 
-  });
 //connection event logs
   const db = mongoose.connection;
   db.on('error', (err) => {
@@ -27,7 +38,7 @@ mongoose.connect(dataBaseConnect, {
 
 //routes
 //signup and login
-app.use("/auth", require("./routes/authRouter.js"));
+app.use("/api/auth", require("./routes/authRouter.js"));
 
 //protected routes
 app.use("/api/main",expressjwt({secret:process.env.SECRET,algorithms:["HS256"]}))

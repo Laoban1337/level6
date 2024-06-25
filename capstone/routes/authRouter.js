@@ -6,23 +6,26 @@ const bcrypt = require("bcrypt");
 
 //sign up route
 authRouter.post(`/signup`, async (req, res, next) => {
-  const { username, password } = req.body; // Extract username and password from request body
+  // Extract username and password from request body
   try {
+    const { username, password } = req.body;
+
     const existingUser = await User.findOne({
-      username: username.toLowerCase(),
+      username: req.body.username.toLowerCase(),
     });
+    
     if (existingUser) {
       res.status(403);
       return next(new Error("That username is already taken"));
     }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({
-      username: username.toLowerCase(),
-      password: hashedPassword,
-    });
+    console.log("username", username);
+    // const hashedPassword = await bcrypt.hash(password, 10);
+    // const newUser = new User({
+    //   username: req.body.username.toLowerCase(),
+    //   password: hashedPassword,
+    // });
     const savedUser = await newUser.save();
-    const token = jwt.sign({ id: savedUser._id }, process.env.SECRET);
+    const token = jwt.sign(savedUser.toObject(), process.env.SECRET);
 
     return res.status(201).send({ token, user: savedUser.withoutPassword() });
   } catch (error) {
@@ -47,7 +50,7 @@ authRouter.post(`/login`, async (req, res, next) => {
     console.log("Stored hashed password:", user.password);
     console.log("Provided password:", password);
 
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = user.checkPassword(password);
 
     if (!isMatch) {
       res.status(403);
@@ -65,5 +68,3 @@ authRouter.post(`/login`, async (req, res, next) => {
 });
 
 module.exports = authRouter;
-
-
