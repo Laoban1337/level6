@@ -50,6 +50,10 @@ app.use((err, req, res, next) => {
   console.log(err);
   return res.status(500).send({ errMsg: err.message });
 });
+app.use(express.static(path.join(__dirname, "client","@latest", "dist")));
+
+app.get("*", (req, res) => {
+res.sendFile(path.join(__dirname, "client","@latest", "dist", "index.html")); });
 
 //server listening
 app.listen(port, () => {
