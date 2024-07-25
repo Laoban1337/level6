@@ -7,6 +7,7 @@ const { expressjwt } = require("express-jwt");
 // const cors = require(`cors`)
 const port = process.env.PORT;
 const dataBaseConnect = process.env.DB;
+const path = require("path");
 
 //middleware
 // app.use(cors());
