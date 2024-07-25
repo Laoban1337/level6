@@ -24,6 +24,7 @@ authRouter.post(`/signup`, async (req, res, next) => {
     //   username: req.body.username.toLowerCase(),
     //   password: hashedPassword,
     // });
+    const newUser = new User(req.body)
     const savedUser = await newUser.save();
     const token = jwt.sign(savedUser.toObject(), process.env.SECRET);
 

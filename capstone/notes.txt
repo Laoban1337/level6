@@ -5,3 +5,16 @@ Build backend for reps
 handle friend requests
 handle upload images: cloudinary
 Workshop on branching
+
+
+
+
+features to add.
+
+Admin that can create a list of user, where the admin can add task to a specific user(households)
+reminder notification for any unfinished tasks(allow reminder time to be set by Admin) 
+Task completion verification(optional)
+unfinished chores added to users list for the next day with chores from the new day
+
+
+later on down the line, I will add invite links to households
